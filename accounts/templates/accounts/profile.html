@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5K8QL3B');</script>
+	<!-- End Google Tag Manager -->
+	
+	<title>Profile Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/profile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+
+	<link rel="stylesheet" href="./fontawesome/css/all.css">
+
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K8QL3B"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+	<div class="navbar">
+		<a href="{% url 'home' %}">StartupTalents</a>
+		{%if user.is_authenticated %}
+		<a href="{% url 'logout' %}" class="right">Logout</a>
+		<a href="{% url 'editprofile' %}" class="right">Hello, {{request.user}}</a>
+		{% else %}
+		<a href="{% url 'register' %}" class="right">Register</a>
+		<a href="{% url 'login' %}" class="right">Login</a>
+		{% endif %}
+	</div>
+	<!--<span class="hello">Hello, {{request.user}} use it later for styling in navbar</span>-->
+		
+		
+	</div>
+
+	<div class="container">
+		<div class="profile-header">
+			<div class="profile-img">
+				<img src="{% static 'images/kylemckiou.jpg' %}" width="200" alt="">
+			</div>
+			<div class="profile-nav-info">
+				<h3 class="user-name">Kyle Mckiou</h3>	
+				<div class="address">
+					<p class="state">New York, 
+					</p>
+					<span classs="country">USA.
+					</span>
+				</div>
+			</div>
+			<div class="profile-option">
+				<div class="notification">
+					<i class="fa fa-bell"></i>
+					<span class="alert-message">1</span>
+				</div>
+			</div>
+		</div>
+		<div class="main-bd">
+			<div class="left-side">
+				<div class="profile-side">
+					
+					<div class="user-bio">
+						<h3>Contact</h3>
+						<p class="bio">Website: branzel.com</p>
+						<p class="bio">Github: github.com/branzel</p>
+						<p class="bio">Twitter: twitter.com/branzel</p>
+						<p class="bio">Instagram: instagram.com/branzel</p>
+					</div>
+					<p class="mobile-no"><i class="fa fa-phone">+51 999888777</i></p>
+					<p class="user-mail"><i class="fa fa-envelope">branzzel@gmail.com</i></p>
+					<br>
+					<div class="profile-btn">
+						<button class="chatbtn">
+							<i class="fa fa-comment"> Message this Talent for $5</i>
+						</button>
+						<!--<button class="createbtn"><i class="fa fa-plus"></i>Create</button>-->
+					</div>
+				<!--<div class="user-rating">
+						<h3 class="rating">4.5</h3>
+						<div class="rate">
+							<div class="stars">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>	
+							</div>
+							<span class="no-user">
+								<span>123</span>&nbsp;&nbsp;reviews
+							</span>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			<div class="right-side">
+				<!--<div class="nav">
+					<ul>
+						<li onclick="tabs(0)" class="user-post active">About</li>
+					    <li onclick="tabs(1)" class="user-review">Reviews</li>
+						<li onclick="tabs(2)" class="user-setting">Settings</li>			
+					</ul>-->						
+				</div>
+				<div class="profile-body">
+					<div class="profile-posts tab">
+						<h2>Bio</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. consectetur adipisicing elit.</p>
+						<br>
+						<h2>Side Projects</h2>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						
+					</div>
+					<br>
+					<div class="profile-review tab">
+						<h2>Employment</h2>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>				
+					</div>
+					<br>
+					<div class="profile-setting tab">
+						<h2>Education</h2>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>2015-2020 Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--<script src="main.js"></script>-->
+	<!-- <script src="./jquery/jquery.js"></script> -->
+
+</body>
+</html>

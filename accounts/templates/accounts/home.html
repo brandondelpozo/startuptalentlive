@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5K8QL3B');</script>
+  <!-- End Google Tag Manager -->
+  
+<title>Startup Talents: Hire the best talent for your startup</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- previous version of css
+  <link rel="stylesheet" href="home.css">--> 
+<link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K8QL3B"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+<!-- stylesheet from css card section --> 
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+<!-- 
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div>  
+-->
+<div class="navbar">
+  <a href="{% url 'home' %}">StartupTalents</a>
+  {%if user.is_authenticated %}
+  <a href="{% url 'logout' %}" class="right">Logout</a>
+  <a href="{% url 'editprofile' %}" class="right">Hello, {{request.user}}</a>
+  {% else %}
+  <a href="{% url 'register' %}" class="right">Register</a>
+  <a href="{% url 'login' %}" class="right">Login</a>
+  {% endif %}
+</div>
+
+<div class="header">
+  <h1>Hire talent not workers</h1>
+  <p>Find the best talent around the world to work in your startup.</p>
+  
+  <!--<input type="text" placeholder="Search talent: Eg.: PHP expert, growth hacker, etc...">-->
+  <div id="button-view-profile" style="padding:7px;padding-bottom:25px;">
+        <a href="{% url 'register' %}" class="buttonregister">REGISTER</a>
+  </div>
+</div>
+
+
+
+<!-- --- HTML card starts here --- --> 
+
+<div class="webinar-grid">
+
+  <div class="link-block">
+    <div class="jumbotron left-right-jumbotron-block">
+      <div class="webinar-image-container">
+        <img src="{% static 'images/isaacsaul.jpg' %}">
+      </div>
+      <h1 class="dundas-blue-text-long">
+     Isaac Saul
+      </h1>
+      <div class="webinar-content-box">
+        <p>Isaac Saul is a senior politics reporter, editor and founding member at A Plus, the positive news oulet founded by Ashton Kutcher. He also writes the independent, non-partisan, ad-free politics newsletter Tangle. His reporting focuses on Congress, elections, immigration and climate change. His writing has appeared in TIME Magazine, CNN, The New York Daily News, The Forward, Yahoo!, The Huffington Post, Quartz, and been cited by The Washington Post, The New York Times and Fox News, among others. Before A Plus, he was an Associate Editor at The Huffington Post and the sports editor at The Pitt News.</p>
+        <!--<span class="dundas-blue-link">View profile </span>-->
+        <!--<span class="dundas-blue-link">View profile</span>-->
+        <!--<a href="{% url 'profile' %}"><span class="dundas-blue-link">View profile </span></a>-->
+        <!--<div class="dundas-blue-link"><a href="{% url 'profile' %}">View profile</a></div>-->
+      </div>
+      <!--<div style="padding:7px;padding-bottom:0;">
+        <a href="{% url 'profile' %}" class="button">View profile</a>
+      </div>-->
+      <div id="button-view-profile" style="padding:7px;padding-bottom:25px;">
+        <a href="http://startuptalents.herokuapp.com/isaac/" class="button">View Profile</a>
+      </div>  
+    </div>
+  </div>
+
+  <div class="link-block">
+    <div class="jumbotron left-right-jumbotron-block">
+      <div class="webinar-image-container">
+        <img src="{% static 'images/kylemckiou.jpg' %}">
+      </div>
+      <h1 class="dundas-blue-text-long">
+     Kyle McKiou
+      </h1>
+      <div class="webinar-content-box">
+        <p>Designing and overseeing the implementation of the Customer Intelligence Center™, the first truly modular, portable, scalable, extensible, machine-learning framework focused on one-to-one marketing that allows major corporations to seamlessly integrate their message with each individual's human journey, not just their customer journey. Designing and overseeing the implementation of the Customer Intelligence Center™, the first truly modular, portable, scalable, extensible, machine-learning framework focused on one-to-one marketing that allows major corporations to seamlessly integrate their message with each individual's human journey, not just their customer journey.</p>
+        <!--<span class="dundas-blue-link">View profile </span>-->
+        <!--<span class="dundas-blue-link">View profile</span>-->
+        <!--<a href="{% url 'profile' %}"><span class="dundas-blue-link">View profile </span></a>-->
+        <!--<div class="dundas-blue-link"><a href="{% url 'profile' %}">View profile</a></div>-->
+      </div>
+      <!--<div style="padding:7px;padding-bottom:0;">
+        <a href="{% url 'profile' %}" class="button">View profile</a>
+      </div>-->
+      <div id="button-view-profile" style="padding:7px;padding-bottom:25px;">
+        <a href="http://startuptalents.herokuapp.com/kyle/" class="button">View Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="link-block">
+    <div class="jumbotron left-right-jumbotron-block">
+      <div class="webinar-image-container">
+        <img src="{% static 'images/Kristen_Kehrer.jpg' %}">
+      </div>
+      <h1 class="dundas-blue-text-long">
+      Kristen Kehrer
+    </h1>
+      <div class="webinar-content-box">
+        <p>I help data science teams who want to:
+          - Interpret their machine learning models and fully communicate the caveats, influential variables, and paint a vivid picture of the model in a way that their stakeholders will understand.
+          - Provide actionable recommendations based on model output that helps your stakeholders confidently make decisions that lead to ROI for the business and improve adoption of machine learning models by the business.
+          - Build trust and excitement around your predictive modeling work across the organization.
+
+          If you manage a data science team that is building predictive models and you’d like to up-level their communication and storytelling skills specifically around Machine Learning.. reach out to: info (at) datamovesme (dot) com 👍.</p>
+      </div>
+      <div id="button-view-profile" style="padding:7px;padding-bottom:25px;">
+        <a href="http://startuptalents.herokuapp.com/kristen/" class="button">View Profile</a>
+      </div>
+    </div>
+  </div>
+
+<!--  <a href="#" class="link-block">
+    <div class="jumbotron left-right-jumbotron-block">
+      <div class="webinar-image-container">
+        <img src="{% static 'images/Cassie_Kozyrkov.jpg' %}">
+      </div>
+      <h1 class="dundas-blue-text-long">
+      Cassie Kozyrkov
+    </h1>
+      <div class="webinar-content-box">
+        <p>I'm a data scientist and leader at Google with a mission to democratize Decision Intelligence and safe, reliable AI. I bring a unique combination of deep technical expertise, world-class public-speaking skills, analytics management experience, and ability to lead organizational change. I've provided guidance on more than 100 projects and designed Google's analytics program, personally training over 20000 Googlers in statistics, decision-making, and machine learning.
+
+        Primary skills: data science, decision science, public-speaking, leadership, strategy, process architecture.
+        Academic expertise: statistics, decision theory, machine learning, artificial intelligence, experimental game theory, industrial organization, behavioral economics, psychology, neuroscience.</p>
+        <span class="dundas-blue-link">View webinar &gt;</span>
+      </div>
+    </div>
+  </a>-->
+
+
+  <div class="link-block">
+    <div class="jumbotron left-right-jumbotron-block">
+      <div class="webinar-image-container">
+        <img src="{% static 'images/Cassie_Kozyrkov.jpg' %}">
+      </div>
+      <h1 class="dundas-blue-text-long">
+      Cassie Kozyrkov
+    </h1>
+      <div class="webinar-content-box">
+        <p>I'm a data scientist and leader at Google with a mission to democratize Decision Intelligence and safe, reliable AI. I bring a unique combination of deep technical expertise, world-class public-speaking skills, analytics management experience, and ability to lead organizational change. I've provided guidance on more than 100 projects and designed Google's analytics program, personally training over 20000 Googlers in statistics, decision-making, and machine learning.
+
+        Primary skills: data science, decision science, public-speaking, leadership, strategy, process architecture.
+        Academic expertise: statistics, decision theory, machine learning, artificial intelligence, experimental game theory, industrial organization, behavioral economics, psychology, neuroscience.</p>
+      </div>
+      <div id="button-view-profile" style="padding:7px;padding-bottom:25px;">
+        <a href="http://startuptalents.herokuapp.com/cassie/" class="button">View Profile</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- --- HTML card ends here --- --> 
+
+
+
+
+</body>
+</html>

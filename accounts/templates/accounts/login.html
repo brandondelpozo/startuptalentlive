@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5K8QL3B');</script>
+  <!-- End Google Tag Manager -->
+  
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+
+</head>
+
+<body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K8QL3B"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+<div class="wrapper">
+  <div class="title">
+        Login
+  </div>
+    
+  <div class="form">
+    <form method="POST" action="">
+        {% csrf_token %}
+         <div class="inputfield">
+         </div>
+
+          <div class="inputfield">
+            <label>Username</label>
+            <input type="text" name="username" class="input" placeholder="Username...">
+         </div> 
+
+         <div class="inputfield">
+            <label>Password</label>
+            <input type="password" name="password"class="input" placeholder="Enter password...">
+         </div> 
+
+    <!-- <div class="inputfield terms">
+            <label class="check">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <p>Agreed to terms and conditions</p>
+         </div>  -->
+
+          <div class="inputfield">
+            <input type="submit" value="Login" class="btn">
+          </div>
+    </form>
+    
+
+        {% for message in messages %}
+          <p id="messages">{{message}}</p>
+        {% endfor %}
+        <br>
+        <div class="foot1">
+          Don't you have an account? <a href="{% url 'register' %}">Sign up</a>
+        </div>
+        <div class="foot1">
+          Forgot password? <a href="{% url 'login' %}">Reset password</a>
+        </div>
+
+  </div>
+</div>
+
+</body>
+</html>
