@@ -1,4 +1,4 @@
-# Startuptalent.io
+# StartupTalent
 Project made by Brandon Del Pozo
 Home Page
 ![image](https://user-images.githubusercontent.com/3943324/131887494-e14a5bae-7519-4bf4-a1dc-e48d73e37cef.png)
